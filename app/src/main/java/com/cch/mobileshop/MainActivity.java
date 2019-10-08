@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //876876876976979879
 
+        //教室的修改
+
         //宿舍的修改
         FragmentManager manager = getSupportFragmentManager();
     }
