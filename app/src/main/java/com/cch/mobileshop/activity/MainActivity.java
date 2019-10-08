@@ -1,8 +1,10 @@
-package com.cch.mobileshop;
+package com.cch.mobileshop.activity;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.cch.mobileshop.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //876876876976979879
 
-        //教室的修改
-        FragmentManager manager = getSupportFragmentManager();
+        //闪屏 引导页 SplashActivity
+
+        //广告页  AdActivity
+
+
     }
 }

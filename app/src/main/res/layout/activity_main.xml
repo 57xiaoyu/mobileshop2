@@ -6,7 +6,7 @@
 
    <fragment
        android:id="@+id/fg"
-       android:name="com.cch.mobileshop.NavigationFragment"
+       android:name="com.cch.mobileshop.fragment.NavigationFragment"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
 

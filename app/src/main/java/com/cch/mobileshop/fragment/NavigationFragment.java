@@ -1,4 +1,4 @@
-package com.cch.mobileshop;
+package com.cch.mobileshop.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.cch.mobileshop.R;
 
 public class NavigationFragment extends Fragment {
 
