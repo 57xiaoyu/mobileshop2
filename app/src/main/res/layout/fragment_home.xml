@@ -3,9 +3,16 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:gravity="center"
-        android:text="HOME"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+   <android.support.v4.widget.SwipeRefreshLayout
+       android:id="@+id/refresh"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+      <WebView
+          android:id="@+id/webview"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"></WebView>
+
+   </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>
