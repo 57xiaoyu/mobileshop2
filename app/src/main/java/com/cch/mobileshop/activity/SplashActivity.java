@@ -11,14 +11,21 @@ import android.widget.ImageView;
 import com.cch.mobileshop.activity.MainActivity;
 import com.cch.mobileshop.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class SplashActivity extends AppCompatActivity {
+
+    @BindView(R.id.iv_loading)
+    ImageView loadingView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ImageView loadingView=findViewById(R.id.iv_loading);
+        ButterKnife.bind(this);
+
 
 
         Animation animation = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.splash_loading);

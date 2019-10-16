@@ -16,18 +16,26 @@ import android.webkit.WebViewClient;
 
 import com.cch.mobileshop.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class HomeFragment extends Fragment {
 
-    private WebView webView;
-    private SwipeRefreshLayout refresh;
+    @BindView(R.id.webview)
+     WebView webView;
+
+    @BindView(R.id.refresh)
+     SwipeRefreshLayout refresh;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        webView = view.findViewById(R.id.webview);
-        refresh = view.findViewById(R.id.refresh);
+        ButterKnife.bind(this,view);
 
+       /* webView = view.findViewById(R.id.webview);
+        refresh = view.findViewById(R.id.refresh);
+*/
         initView();
         return view;
     }

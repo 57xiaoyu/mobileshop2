@@ -13,27 +13,52 @@ import android.widget.ImageView;
 
 import com.cch.mobileshop.R;
 
-public class NavigationFragment extends Fragment {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
-    private ImageView iv_home;
-    private ImageView iv_category;
-    private ImageView iv_cart;
-    private ImageView iv_personal;
+public class NavigationFragment extends Fragment {
+/*    @BindView(R.id.iv_home)
+    ImageView ivHome;
+    @BindView(R.id.iv_category)
+    ImageView ivCategory;
+    @BindView(R.id.iv_cart)
+    ImageView ivCart;
+    @BindView(R.id.iv_personal)
+    ImageView ivPersonal;*/
+    Unbinder unbinder;
+
+    @BindView(R.id.iv_home)
+    ImageView iv_home;
+
+    @BindView(R.id.iv_category)
+    ImageView iv_category;
+
+    @BindView(R.id.iv_cart)
+    ImageView iv_cart;
+
+    @BindView(R.id.iv_personal)
+    ImageView iv_personal;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_navigation, container, false);
+
+        unbinder = ButterKnife.bind(this, view);
         initView(view);
+
         return view;
     }
 
     private void initView(View view) {
-        iv_home = view.findViewById(R.id.iv_home);
+    /*    iv_home = view.findViewById(R.id.iv_home);
         iv_category = view.findViewById(R.id.iv_category);
         iv_cart = view.findViewById(R.id.iv_cart);
         iv_personal = view.findViewById(R.id.iv_personal);
-
+*/
         resetImageResource(iv_home);
         showFragment(iv_home);
 
@@ -153,4 +178,23 @@ public class NavigationFragment extends Fragment {
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @OnClick({R.id.iv_home, R.id.iv_category, R.id.iv_cart, R.id.iv_personal})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.iv_home:
+                break;
+            case R.id.iv_category:
+                break;
+            case R.id.iv_cart:
+                break;
+            case R.id.iv_personal:
+                break;
+        }
+    }
 }
