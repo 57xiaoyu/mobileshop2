@@ -1,6 +1,5 @@
 package com.cch.mobileshop.fragment;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,8 +8,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -40,7 +37,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    String url="http://10.10.16.78:8088/MobileShop/";
+    String url="http://10.10.16.78:8088/MobileShop/MobileshopIndex.html";
 
     private void initView() {
         refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

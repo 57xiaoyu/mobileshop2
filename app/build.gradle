@@ -30,5 +30,5 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
 
-
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
 }
