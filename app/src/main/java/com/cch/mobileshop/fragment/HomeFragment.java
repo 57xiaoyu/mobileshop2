@@ -40,12 +40,14 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    String url="http://10.10.16.78:8088/MobileShop/";
+
     private void initView() {
         refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 refresh.setRefreshing(false);
-                webView.loadUrl("https://www.apple.com/");
+                webView.loadUrl(url);
             }
         });
 
@@ -63,7 +65,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        webView.loadUrl("https://www.apple.com/");
+        webView.loadUrl(url);
     }
 
     class MyWebViewClient extends WebViewClient{
