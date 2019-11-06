@@ -30,7 +30,8 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
 
-    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    //implementation 'com.squareup.okhttp3:okhttp:4.2.2'
 
     //implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.code.gson:gson:2.8.0'
