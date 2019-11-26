@@ -4,6 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.concurrent.TimeUnit;
@@ -30,6 +33,18 @@ public class MyApp extends Application {
                 .build();
 
         OkHttpUtils.initClient(okHttpClient);
+
+        //初始化ImageLoader
+
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+                .showImageOnFail(R.mipmap.error)
+                .showImageOnLoading(R.mipmap.zhanweitu)
+                .build();
+        ImageLoaderConfiguration configuration = new ImageLoaderConfiguration
+                .Builder(getApplicationContext())
+                .defaultDisplayImageOptions(options)
+                .build();
+        ImageLoader.getInstance().init(configuration);
     }
 
 }

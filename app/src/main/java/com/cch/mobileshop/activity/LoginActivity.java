@@ -43,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-
     }
 
 
@@ -52,6 +51,8 @@ public class LoginActivity extends AppCompatActivity {
 
        final String username = et_username.getText().toString();
        final String pwd = et_pwd.getText().toString();
+
+       Log.d("LoginActivity","login 执行了");
 
        String url="http://10.10.16.78:8088/MobileShop/member/login2";
 
@@ -65,10 +66,14 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         //
+                        Log.d("Exception:",e.getMessage());
+                        Log.d("LoginActivity","onError 执行了 出错了"+e.getMessage());
+
                     }
 
                     @Override
                     public void onResponse(String response, int id) {
+                        Log.d("LoginActivity","onResponse 执行了 成功了");
                         //JSON  主线程
                         Gson gson = new Gson();
                         LoginResponse2 response2 = gson.fromJson(response, LoginResponse2.class);

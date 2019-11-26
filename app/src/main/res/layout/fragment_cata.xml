@@ -5,7 +5,29 @@
 
     <TextView
         android:gravity="center"
-        android:text="分类"
+        android:text="搜索"
+        android:background="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="50dp" />
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+         <android.support.v7.widget.RecyclerView
+             android:id="@+id/rv_right"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 </LinearLayout>

@@ -13,7 +13,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.cch.mobileshop.R;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import butterknife.BindColor;
 import butterknife.BindString;
@@ -72,6 +74,13 @@ public class AdActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
+        ImageLoader.getInstance().displayImage("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574141635052&di=7fb8170cf7b4ccb60faef5bd2c222b38&imgtype=0&src=http%3A%2F%2Fpic18.nipic.com%2F20120204%2F4938944_155731011373_2.jpg",imageView);
+        //加载图片
+      /*  Glide.with(AdActivity.this)
+                .load("https://timgsa.baidu.com/timg9999?image&quality=80&size=b9999_10000&sec=1574141635052&di=7fb8170cf7b4ccb60faef5bd2c222b38&imgtype=0&src=http%3A%2F%2Fpic18.nipic.com%2F20120204%2F4938944_155731011373_2.jpg")
+                .placeholder(R.mipmap.zhanweitu)
+                .error(R.mipmap.error)
+                .into(imageView);*/
 
 
         tv_count.setBackgroundColor(col);
